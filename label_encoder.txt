@@ -1,0 +1,9 @@
+'NEU' => 0
+'ANG' => 1
+'SUR' => 2
+'SAD' => 3
+'JOY' => 4
+'FEA' => 5
+'DIS' => 6
+================
+'starting_index' => 0
