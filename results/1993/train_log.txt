@@ -1,0 +1,8 @@
+Epoch: 1, lr: 1.00e-04, wave2vec_lr: 1.00e-05 - train loss: 1.80 - valid loss: 1.92, valid error_rate: 5.76e-01
+Epoch: 2, lr: 1.00e-04, wave2vec_lr: 1.00e-05 - train loss: 1.73 - valid loss: 1.69, valid error_rate: 5.76e-01
+Epoch: 3, lr: 9.00e-05, wave2vec_lr: 9.00e-06 - train loss: 1.69 - valid loss: 1.91, valid error_rate: 5.76e-01
+Epoch: 4, lr: 8.10e-05, wave2vec_lr: 8.10e-06 - train loss: 1.70 - valid loss: 1.65, valid error_rate: 5.76e-01
+Epoch: 5, lr: 7.29e-05, wave2vec_lr: 7.29e-06 - train loss: 1.69 - valid loss: 1.69, valid error_rate: 5.76e-01
+Epoch: 6, lr: 6.56e-05, wave2vec_lr: 6.56e-06 - train loss: 1.69 - valid loss: 1.75, valid error_rate: 6.82e-01
+Epoch: 7, lr: 5.90e-05, wave2vec_lr: 5.90e-06 - train loss: 1.56 - valid loss: 1.67, valid error_rate: 5.76e-01
+Epoch: 8, lr: 5.90e-05, wave2vec_lr: 5.90e-06 - train loss: 1.56 - valid loss: 1.64, valid error_rate: 5.76e-01

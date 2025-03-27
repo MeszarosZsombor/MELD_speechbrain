@@ -1,4 +1,4 @@
-# Generated 2025-03-26 from:
+# Generated 2025-03-27 from:
 # /home/zsombor/MELD_speechbrain/train_with_wav2vec2.yaml
 # yamllint disable
 # ########################################
@@ -12,7 +12,7 @@ seed: 1993
 __set_seed: !apply:speechbrain.utils.seed_everything [1993]
 
 # Dataset will be downloaded to the `data_original`
-data_folder: ''  # e.g., /path/to/IEMOCAP_full_release
+data_folder: .  # e.g., /path/to/IEMOCAP_full_release
 output_folder: results/1993
 save_folder: results/1993/save
 train_log: results/1993/train_log.txt
@@ -43,7 +43,7 @@ ckpt_interval_minutes: 15 # save checkpoint every N min
 
 ####################### Training Parameters ####################################
 number_of_epochs: 30
-batch_size: 4
+batch_size: 2
 lr: 0.0001
 lr_wav2vec2: 0.00001
 
@@ -60,7 +60,7 @@ encoder_dim: 768
 out_n_neurons: 7 # (anger, fear, disgust, joy, neutral, surprise, sadness)
 
 dataloader_options:
-  batch_size: 4
+  batch_size: 2
   shuffle: true
   num_workers: 2    # 2 on linux but 0 works on windows
   drop_last: false

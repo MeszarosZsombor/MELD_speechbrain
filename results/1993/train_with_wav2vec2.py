@@ -17,6 +17,7 @@ import sys
 from hyperpyyaml import load_hyperpyyaml
 
 import speechbrain as sb
+import torch
 
 
 class EmoIdBrain(sb.Brain):
@@ -38,6 +39,7 @@ class EmoIdBrain(sb.Brain):
     def compute_objectives(self, predictions, batch, stage):
         """Computes the loss using speaker-id as label."""
         emoid, _ = batch.emo_encoded
+        print(torch.cuda.memory_summary(device="cuda", abbreviated=True))
 
         """to meet the input form of nll loss"""
         emoid = emoid.squeeze(1)
@@ -176,7 +178,7 @@ def dataio_prep(hparams):
 
     # Define label pipeline:
     @sb.utils.data_pipeline.takes("emotion")
-    @sb.utils.data_pipeline.provides("emotion", "emo_encoded")
+    @sb.utils.data_pipeline.provides("emo", "emo_encoded")
     def label_pipeline(emo):
         yield emo
         emo_encoded = label_encoder.encode_label_torch(emo)
@@ -229,24 +231,6 @@ if __name__ == "__main__":
         hyperparams_to_save=hparams_file,
         overrides=overrides,
     )
-
-    # from iemocap_prepare import prepare_data  # noqa E402
-    #
-    # # Data preparation, to be run on only one process.
-    # if not hparams["skip_prep"]:
-    #     sb.utils.distributed.run_on_main(
-    #         prepare_data,
-    #         kwargs={
-    #             "data_original": hparams["data_folder"],
-    #             "save_json_train": hparams["train_annotation"],
-    #             "save_json_valid": hparams["valid_annotation"],
-    #             "save_json_test": hparams["test_annotation"],
-    #             "split_ratio": hparams["split_ratio"],
-    #             "different_speakers": hparams["different_speakers"],
-    #             "test_spk_id": hparams["test_spk_id"],
-    #             "seed": hparams["seed"],
-    #         },
-    #     )
 
     # Create dataset objects "train", "valid", and "test".
     datasets = dataio_prep(hparams)
