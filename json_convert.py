@@ -3,6 +3,7 @@ import json
 import pandas as pd
 import librosa
 import re
+import wave
 from collections import Counter
 
 def time_to_seconds(time_str):
@@ -13,6 +14,14 @@ def time_to_seconds(time_str):
     hours, minutes, seconds, milliseconds = map(int, match.groups())
     total_seconds = hours * 3600 + minutes * 60 + seconds + milliseconds / 1000
     return round(total_seconds, 3)
+
+def get_wav_length(wav_path):
+    """Kiolvassa a WAV fájl hosszát másodpercekben."""
+    with wave.open(wav_path, "r") as wf:
+        frames = wf.getnframes()  # Összes minta
+        rate = wf.getframerate()  # Mintavételezési gyakoriság
+        duration = frames / float(rate)  # Másodpercekben
+        return round(duration, 3)  # Három tizedesjegyre kerekítve
 
 def convert(wav_dir, csv_file, output_json):
 
@@ -27,16 +36,10 @@ def convert(wav_dir, csv_file, output_json):
     for (index, row), wav_filename in zip(df.iterrows(), wav_files):
         emotion = row["Emotion"][0:3].upper()
         sentiment = row["Sentiment"][0:3].upper()
-        start = row.get("StartTime", None)
-        end = row.get("EndTime", None)
 
         wav_path = os.path.join(wav_dir, wav_filename)
 
-        if pd.notna(start) and pd.notna(end):
-            length = time_to_seconds(end) - time_to_seconds(start)
-        else:
-            duration = librosa.get_duration(path=wav_path)
-            length = round(duration)
+        length = get_wav_length(wav_path)
 
         data[wav_filename] = {
             "wav": "{data_root}/" + wav_path,
@@ -53,7 +56,7 @@ def convert(wav_dir, csv_file, output_json):
             "sentiment": sentiment_counter
         }
 
-    with open(output_json, "w", encoding="utf-8") as f:
+    with open("jsons/" + output_json, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
     with open("jsons/counter-" + output_json, "w", encoding="utf-8") as f:
