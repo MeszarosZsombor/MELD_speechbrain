@@ -1,4 +1,4 @@
-# Generated 2025-03-27 from:
+# Generated 2025-04-02 from:
 # /home/zsombor/MELD_speechbrain/train_with_wav2vec2.yaml
 # yamllint disable
 # ########################################
@@ -43,7 +43,7 @@ ckpt_interval_minutes: 15 # save checkpoint every N min
 
 ####################### Training Parameters ####################################
 number_of_epochs: 30
-batch_size: 2
+batch_size: 7
 lr: 0.0001
 lr_wav2vec2: 0.00001
 
@@ -60,7 +60,7 @@ encoder_dim: 768
 out_n_neurons: 7 # (anger, fear, disgust, joy, neutral, surprise, sadness)
 
 dataloader_options:
-  batch_size: 2
+  batch_size: 7
   shuffle: true
   num_workers: 2    # 2 on linux but 0 works on windows
   drop_last: false

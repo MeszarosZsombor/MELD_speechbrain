@@ -40,7 +40,7 @@ ckpt_interval_minutes: 15 # save checkpoint every N min
 
 ####################### Training Parameters ####################################
 number_of_epochs: 30
-batch_size: 2
+batch_size: 7
 lr: 0.0001
 lr_wav2vec2: 0.00001
 
@@ -93,7 +93,7 @@ log_softmax: !new:speechbrain.nnet.activations.Softmax
 
 compute_cost: !name:speechbrain.nnet.losses.nll_loss
 
-error_stats: !name:speechbrain.utils.metric_stats.MetricStats
+error_stats: !name:speechbrain.utils.metric_stats.ClassificationStats
     metric: !name:speechbrain.nnet.losses.classification_error
         reduction: batch
 
