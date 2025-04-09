@@ -2471,12 +2471,6 @@
         "emotion": "JOY",
         "sentiment": "POS"
     },
-    "dia0046_utt08.wav": {
-        "wav": "{data_root}/MELD-wav16k/wav16k_test/dia0046_utt08.wav",
-        "length": 16.619,
-        "emotion": "JOY",
-        "sentiment": "POS"
-    },
     "dia0047_utt00.wav": {
         "wav": "{data_root}/MELD-wav16k/wav16k_test/dia0047_utt00.wav",
         "length": 3.52,
@@ -5576,12 +5570,6 @@
     "dia0104_utt02.wav": {
         "wav": "{data_root}/MELD-wav16k/wav16k_test/dia0104_utt02.wav",
         "length": 1.6,
-        "emotion": "ANG",
-        "sentiment": "NEG"
-    },
-    "dia0105_utt00.wav": {
-        "wav": "{data_root}/MELD-wav16k/wav16k_test/dia0105_utt00.wav",
-        "length": 16.064,
         "emotion": "ANG",
         "sentiment": "NEG"
     },

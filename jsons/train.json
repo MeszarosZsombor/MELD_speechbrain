@@ -29009,12 +29009,6 @@
         "emotion": "JOY",
         "sentiment": "POS"
     },
-    "dia0517_utt06.wav": {
-        "wav": "{data_root}/MELD-wav16k/wav16k_train/dia0517_utt06.wav",
-        "length": 20.139,
-        "emotion": "SAD",
-        "sentiment": "NEG"
-    },
     "dia0518_utt00.wav": {
         "wav": "{data_root}/MELD-wav16k/wav16k_train/dia0518_utt00.wav",
         "length": 4.053,

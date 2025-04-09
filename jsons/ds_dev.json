@@ -1,0 +1,926 @@
+{
+    "dia0068_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0068_utt01.wav",
+        "length": 1.771,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0073_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0073_utt02.wav",
+        "length": 4.352,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0092_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0092_utt08.wav",
+        "length": 1.877,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0077_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0077_utt09.wav",
+        "length": 6.805,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0023_utt12.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0023_utt12.wav",
+        "length": 9.301,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0066_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0066_utt03.wav",
+        "length": 5.056,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0063_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0063_utt06.wav",
+        "length": 0.747,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0069_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0069_utt09.wav",
+        "length": 3.883,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0113_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0113_utt08.wav",
+        "length": 3.925,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0023_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0023_utt01.wav",
+        "length": 4.181,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0056_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0056_utt08.wav",
+        "length": 2.965,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0001_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0001_utt02.wav",
+        "length": 3.307,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0014_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0014_utt07.wav",
+        "length": 0.683,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0077_utt10.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0077_utt10.wav",
+        "length": 1.173,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0089_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0089_utt02.wav",
+        "length": 4.8,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0090_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0090_utt02.wav",
+        "length": 2.347,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0031_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0031_utt02.wav",
+        "length": 11.392,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0056_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0056_utt06.wav",
+        "length": 2.005,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0077_utt12.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0077_utt12.wav",
+        "length": 4.565,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0056_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0056_utt00.wav",
+        "length": 2.261,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0009_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0009_utt01.wav",
+        "length": 2.133,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0113_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0113_utt05.wav",
+        "length": 2.56,
+        "emotion": "SAD",
+        "sentiment": "NEG"
+    },
+    "dia0065_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0065_utt02.wav",
+        "length": 1.429,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0031_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0031_utt01.wav",
+        "length": 2.048,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0070_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0070_utt01.wav",
+        "length": 3.648,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0054_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0054_utt09.wav",
+        "length": 1.472,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0091_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0091_utt01.wav",
+        "length": 2.347,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0095_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0095_utt03.wav",
+        "length": 3.755,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0023_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0023_utt03.wav",
+        "length": 1.835,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0022_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0022_utt03.wav",
+        "length": 0.789,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0104_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0104_utt04.wav",
+        "length": 0.427,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0027_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0027_utt05.wav",
+        "length": 1.685,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0076_utt14.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0076_utt14.wav",
+        "length": 5.632,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0083_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0083_utt04.wav",
+        "length": 3.755,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0097_utt14.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0097_utt14.wav",
+        "length": 3.797,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0069_utt14.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0069_utt14.wav",
+        "length": 14.933,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0113_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0113_utt03.wav",
+        "length": 0.32,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0007_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0007_utt04.wav",
+        "length": 1.408,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0037_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0037_utt04.wav",
+        "length": 1.579,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0004_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0004_utt09.wav",
+        "length": 3.179,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0067_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0067_utt05.wav",
+        "length": 5.44,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0027_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0027_utt00.wav",
+        "length": 1.429,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0004_utt11.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0004_utt11.wav",
+        "length": 10.389,
+        "emotion": "SUR",
+        "sentiment": "POS"
+    },
+    "dia0049_utt14.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0049_utt14.wav",
+        "length": 2.432,
+        "emotion": "SUR",
+        "sentiment": "NEG"
+    },
+    "dia0021_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0021_utt00.wav",
+        "length": 3.52,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0032_utt10.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0032_utt10.wav",
+        "length": 7.851,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0016_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0016_utt00.wav",
+        "length": 7.232,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0106_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0106_utt03.wav",
+        "length": 3.392,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0024_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0024_utt01.wav",
+        "length": 0.171,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0048_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0048_utt00.wav",
+        "length": 4.843,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0057_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0057_utt07.wav",
+        "length": 1.835,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0040_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0040_utt07.wav",
+        "length": 5.888,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0044_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0044_utt08.wav",
+        "length": 2.091,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0033_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0033_utt01.wav",
+        "length": 4.309,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0045_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0045_utt06.wav",
+        "length": 2.731,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0094_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0094_utt04.wav",
+        "length": 2.923,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0109_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0109_utt06.wav",
+        "length": 4.096,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0085_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0085_utt08.wav",
+        "length": 1.621,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0097_utt13.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0097_utt13.wav",
+        "length": 3.52,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0030_utt11.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0030_utt11.wav",
+        "length": 2.56,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0056_utt16.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0056_utt16.wav",
+        "length": 2.304,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0009_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0009_utt06.wav",
+        "length": 3.648,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0106_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0106_utt02.wav",
+        "length": 1.643,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0079_utt10.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0079_utt10.wav",
+        "length": 4.053,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0034_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0034_utt09.wav",
+        "length": 4.8,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0051_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0051_utt03.wav",
+        "length": 2.261,
+        "emotion": "NEU",
+        "sentiment": "NEU"
+    },
+    "dia0007_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0007_utt01.wav",
+        "length": 2.837,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0089_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0089_utt04.wav",
+        "length": 7.189,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0028_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0028_utt07.wav",
+        "length": 5.525,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0082_utt17.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0082_utt17.wav",
+        "length": 3.947,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0001_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0001_utt05.wav",
+        "length": 1.109,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0096_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0096_utt00.wav",
+        "length": 2.923,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0053_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0053_utt06.wav",
+        "length": 1.941,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0057_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0057_utt01.wav",
+        "length": 5.184,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0013_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0013_utt04.wav",
+        "length": 1.963,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0039_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0039_utt02.wav",
+        "length": 3.051,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0073_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0073_utt01.wav",
+        "length": 1.003,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0058_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0058_utt09.wav",
+        "length": 4.224,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0053_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0053_utt00.wav",
+        "length": 6.891,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0105_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0105_utt00.wav",
+        "length": 2.944,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0019_utt21.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0019_utt21.wav",
+        "length": 2.56,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0028_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0028_utt02.wav",
+        "length": 5.227,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0015_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0015_utt00.wav",
+        "length": 9.067,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0030_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0030_utt08.wav",
+        "length": 5.717,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0064_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0064_utt03.wav",
+        "length": 2.091,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0085_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0085_utt05.wav",
+        "length": 2.517,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0110_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0110_utt04.wav",
+        "length": 2.176,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0097_utt21.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0097_utt21.wav",
+        "length": 1.493,
+        "emotion": "JOY",
+        "sentiment": "POS"
+    },
+    "dia0049_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0049_utt09.wav",
+        "length": 3.797,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0019_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0019_utt04.wav",
+        "length": 5.056,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0081_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0081_utt00.wav",
+        "length": 1.557,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0025_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0025_utt00.wav",
+        "length": 1.451,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0104_utt11.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0104_utt11.wav",
+        "length": 1.131,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0082_utt15.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0082_utt15.wav",
+        "length": 2.325,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0050_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0050_utt00.wav",
+        "length": 4.523,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0088_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0088_utt03.wav",
+        "length": 1.643,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0072_utt12.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0072_utt12.wav",
+        "length": 1.771,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0005_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0005_utt08.wav",
+        "length": 2.411,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0066_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0066_utt02.wav",
+        "length": 8.384,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0108_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0108_utt02.wav",
+        "length": 2.88,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0074_utt15.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0074_utt15.wav",
+        "length": 1.92,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0040_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0040_utt06.wav",
+        "length": 1.877,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0026_utt15.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0026_utt15.wav",
+        "length": 3.712,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0016_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0016_utt04.wav",
+        "length": 3.648,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0077_utt19.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0077_utt19.wav",
+        "length": 3.883,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0082_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0082_utt04.wav",
+        "length": 0.213,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0005_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0005_utt09.wav",
+        "length": 0.128,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0097_utt20.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0097_utt20.wav",
+        "length": 1.536,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0095_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0095_utt04.wav",
+        "length": 2.688,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0016_utt16.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0016_utt16.wav",
+        "length": 3.392,
+        "emotion": "ANG",
+        "sentiment": "NEG"
+    },
+    "dia0020_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0020_utt05.wav",
+        "length": 0.512,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0036_utt11.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0036_utt11.wav",
+        "length": 3.691,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0020_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0020_utt06.wav",
+        "length": 1.792,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0016_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0016_utt09.wav",
+        "length": 3.2,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0015_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0015_utt07.wav",
+        "length": 1.387,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0076_utt10.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0076_utt10.wav",
+        "length": 3.691,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0057_utt12.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0057_utt12.wav",
+        "length": 7.552,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0091_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0091_utt06.wav",
+        "length": 3.435,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0023_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0023_utt06.wav",
+        "length": 1.301,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0034_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0034_utt07.wav",
+        "length": 1.984,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0108_utt13.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0108_utt13.wav",
+        "length": 1.728,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0020_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0020_utt04.wav",
+        "length": 2.411,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0091_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0091_utt02.wav",
+        "length": 1.259,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0007_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0007_utt08.wav",
+        "length": 1.579,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0054_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0054_utt03.wav",
+        "length": 5.355,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0037_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0037_utt07.wav",
+        "length": 1.259,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0040_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0040_utt02.wav",
+        "length": 4.757,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0092_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0092_utt06.wav",
+        "length": 1.451,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0091_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0091_utt04.wav",
+        "length": 2.795,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0091_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0091_utt08.wav",
+        "length": 1.024,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0093_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0093_utt06.wav",
+        "length": 5.504,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0097_utt19.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0097_utt19.wav",
+        "length": 0.491,
+        "emotion": "DIS",
+        "sentiment": "NEG"
+    },
+    "dia0018_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0018_utt05.wav",
+        "length": 0.363,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0037_utt06.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0037_utt06.wav",
+        "length": 4.437,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0011_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0011_utt05.wav",
+        "length": 3.008,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0045_utt11.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0045_utt11.wav",
+        "length": 1.899,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0018_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0018_utt07.wav",
+        "length": 4.139,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0065_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0065_utt07.wav",
+        "length": 6.229,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0046_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0046_utt08.wav",
+        "length": 2.304,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0078_utt03.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0078_utt03.wav",
+        "length": 3.84,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0030_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0030_utt01.wav",
+        "length": 3.093,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0015_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0015_utt08.wav",
+        "length": 1.621,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0037_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0037_utt02.wav",
+        "length": 1.259,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0037_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0037_utt05.wav",
+        "length": 0.448,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0088_utt04.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0088_utt04.wav",
+        "length": 5.056,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0104_utt05.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0104_utt05.wav",
+        "length": 1.344,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0104_utt07.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0104_utt07.wav",
+        "length": 2.688,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0078_utt01.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0078_utt01.wav",
+        "length": 3.968,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0045_utt09.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0045_utt09.wav",
+        "length": 1.387,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0108_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0108_utt08.wav",
+        "length": 2.005,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0040_utt08.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0040_utt08.wav",
+        "length": 2.24,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0030_utt00.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0030_utt00.wav",
+        "length": 3.563,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0088_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0088_utt02.wav",
+        "length": 0.896,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    },
+    "dia0010_utt02.wav": {
+        "wav": "{data_root}/MELD-wav16k/wav16k_dev/dia0010_utt02.wav",
+        "length": 3.648,
+        "emotion": "FEA",
+        "sentiment": "NEG"
+    }
+}
