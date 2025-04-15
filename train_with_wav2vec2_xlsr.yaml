@@ -5,25 +5,38 @@
 # ########################################
 
 # Seed needs to be set at top of yaml, before objects with parameters are made
-seed: 567422
+#seed: 20241002
+#seed: 1273891739
+#seed: 3789247294
+#seed: 1602348532
+seed: 572103857
 __set_seed: !apply:speechbrain.utils.seed_everything [!ref <seed>]
 
 # Dataset will be downloaded to the `data_original`
-data_folder: .  # e.g., /path/to/IEMOCAP_full_release
-output_folder: !ref results/<seed>
-save_folder: !ref <output_folder>/save
+data_folder: /mnt/d/Shared/MSP_Podcast  # e.g., /path/to/IEMOCAP_full_release
+output_folder: !ref results/train_with_wav2vec2_downsample_seed5/<seed>
+save_folder: !ref <output_folder>/save-wav2vec2-xlsr-53
 train_log: !ref <output_folder>/train_log.txt
 
 # URL for the wav2vec2 model, you can change to benchmark different models
 # Important: we use wav2vec2 base and not the fine-tuned one with ASR task
 # This allow you to have ~4% improvement
-wav2vec2_hub: facebook/wav2vec2-base
+#wav2vec2_hub: facebook/wav2vec2-base
+wav2vec2_hub: facebook/wav2vec2-large-xlsr-53
 wav2vec2_folder: !ref <save_folder>/wav2vec2_checkpoint
 
+# different speakers for train, valid and test sets
+different_speakers: False
+# which speaker is used for test set, value from 1 to 10
+test_spk_id: 1
+
 # Path where data manifest files will be stored
-train_annotation: !ref jsons/ds_train.json
-valid_annotation: !ref jsons/ds_dev.json
-test_annotation: !ref jsons/ds_test.json
+train_annotation: !ref Labels/Train.500.json
+valid_annotation: !ref Labels/Development.500.json
+test_annotation: !ref Labels/Test1.100.json
+#train_annotation: !ref labels/Train_class8_downsample_seed5.json
+#valid_annotation: !ref labels/Development_class8_downsample_seed5.json
+#test_annotation: !ref labels/Test1_class8_downsample.json
 
 # The train logger writes training statistics to a file, as well as stdout.
 train_logger: !new:speechbrain.utils.train_logger.FileTrainLogger
@@ -32,8 +45,8 @@ train_logger: !new:speechbrain.utils.train_logger.FileTrainLogger
 ckpt_interval_minutes: 15 # save checkpoint every N min
 
 ####################### Training Parameters ####################################
-number_of_epochs: 20
-batch_size: 7
+number_of_epochs: 15
+batch_size: 4
 lr: 0.0001
 lr_wav2vec2: 0.00001
 
@@ -44,10 +57,11 @@ freeze_wav2vec2: False
 freeze_wav2vec2_conv: True
 
 ####################### Model Parameters #######################################
-encoder_dim: 768
+#encoder_dim: 768
+encoder_dim: 1024
 
 # Number of emotions
-out_n_neurons: 7 # (anger, fear, disgust, joy, neutral, surprise, sadness)
+out_n_neurons: 8
 
 dataloader_options:
     batch_size: !ref <batch_size>
@@ -86,16 +100,15 @@ log_softmax: !new:speechbrain.nnet.activations.Softmax
 
 compute_cost: !name:speechbrain.nnet.losses.nll_loss
 
+error_stats: !name:speechbrain.utils.metric_stats.ClassificationStats
 #error_stats: !name:speechbrain.utils.metric_stats.MetricStats
 #    metric: !name:speechbrain.nnet.losses.classification_error
 #        reduction: batch
 
-error_stats: !name:speechbrain.utils.metric_stats.ClassificationStats
-
-opt_class: !name:torch.optim.Adam
+opt_class: !name:torch.optim.AdamW
     lr: !ref <lr>
 
-wav2vec2_opt_class: !name:torch.optim.Adam
+wav2vec2_opt_class: !name:torch.optim.AdamW
     lr: !ref <lr_wav2vec2>
 
 lr_annealing: !new:speechbrain.nnet.schedulers.NewBobScheduler

@@ -110,4 +110,31 @@ def downsample(count_json, wav_json, output_json):
     print(f"Done! Output: {output_json}")
 
 
-downsample("jsons/counter_dev.json", "jsons/dev.json", "jsons/ds_dev.json")
+#downsample("jsons/counter_dev.json", "jsons/dev.json", "jsons/ds_dev.json")
+
+def label_predictions(train_json, predictions_json, output_json):
+    with open(train_json, "r") as f:
+        train_data = json.load(f)
+
+    with open(predictions_json, "r") as f:
+        pred_data = json.load(f)
+
+    results = {}
+
+    for wav_file, meta in train_data.items():
+        if wav_file in pred_data:
+            predicted = pred_data[wav_file]["predicted_class"]
+            true_label = meta["emotion"]
+
+            results[wav_file] = {
+                "true_label": true_label,
+                "predicted_class": predicted
+            }
+
+    # Kiírás JSON-be (vagy mehetne CSV-be is)
+    with open(output_json, "w") as f:
+        json.dump(results, f, indent=4)
+
+    print(f"Done! Output: {output_json}")
+
+label_predictions("jsons/ds_test.json", "results/567422/prediction_outputs.json", "results/567422/labels.json")

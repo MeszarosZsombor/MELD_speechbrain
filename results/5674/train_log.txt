@@ -1,0 +1,1 @@
+Epoch: 1, lr: 1.00e-04, wave2vec_lr: 1.00e-05 - train loss: 1.57 - valid loss: 1.66, valid error_rate: 5.76e-01

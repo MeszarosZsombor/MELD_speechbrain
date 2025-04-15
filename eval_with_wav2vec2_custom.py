@@ -17,14 +17,15 @@ import sys
 from hyperpyyaml import load_hyperpyyaml
 
 import speechbrain as sb
-import torch
 
 
-class EmoIdBrain(sb.Brain):
+class SpeakerIdBrain(sb.Brain):
     def compute_forward(self, batch, stage):
         """Computation pipeline based on a encoder + emotion classifier."""
         batch = batch.to(self.device)
         wavs, lens = batch.sig
+
+#        embeddings = self.modules.embedding_model(wavs, lens)
 
         outputs = self.modules.wav2vec2(wavs, lens)
 
@@ -38,20 +39,13 @@ class EmoIdBrain(sb.Brain):
 
     def compute_objectives(self, predictions, batch, stage):
         """Computes the loss using speaker-id as label."""
-        emoid, _ = batch.emo_encoded
-        #print(torch.cuda.memory_summary(device="cuda", abbreviated=True))
+        emoid, _ = batch.label_encoded
 
         """to meet the input form of nll loss"""
         emoid = emoid.squeeze(1)
         loss = self.hparams.compute_cost(predictions, emoid)
         if stage != sb.Stage.TRAIN:
-            #self.error_metrics.append(batch.id, predictions, emoid)
-
-            predicted_class = predictions.argmax(dim=-1)
-            ids = batch.id
-            preds = [p.item() for p in predicted_class]
-            targets = [t.item() for t in emoid]
-            self.error_metrics.append(ids, preds, targets)
+            self.error_metrics.append(batch.id, predictions, emoid)
 
         return loss
 
@@ -96,8 +90,7 @@ class EmoIdBrain(sb.Brain):
         else:
             stats = {
                 "loss": stage_loss,
-                #"error_rate": self.error_metrics.summarize("average"),
-                "error_rate\n": self.error_metrics.summarize()["confusion_matrix"],
+                "error_rate": self.error_metrics.summarize("average"),
             }
 
         # At the end of validation...
@@ -171,25 +164,29 @@ def dataio_prep(hparams):
 
     # Define audio pipeline
     @sb.utils.data_pipeline.takes("wav")
-    @sb.utils.data_pipeline.provides("sig")
+    @sb.utils.data_pipeline.provides("wav", "sig")
     def audio_pipeline(wav):
         """Load the signal, and pass it and its length to the corruption class.
         This is done on the CPU in the `collate_fn`."""
-        assert os.path.exists(wav), f"File not found: {wav}"
+        yield wav
+#        print(wav)
         sig = sb.dataio.dataio.read_audio(wav)
-        return sig
+#        return sig
+        yield sig
 
     # Initialization of the label encoder. The label encoder assigns to each
     # of the observed label a unique index (e.g, 'spk01': 0, 'spk02': 1, ..)
     label_encoder = sb.dataio.encoder.CategoricalEncoder()
 
     # Define label pipeline:
-    @sb.utils.data_pipeline.takes("emotion")
-    @sb.utils.data_pipeline.provides("emo", "emo_encoded")
-    def label_pipeline(emo):
-        yield emo
-        emo_encoded = label_encoder.encode_label_torch(emo)
-        yield emo_encoded
+    @sb.utils.data_pipeline.takes("label")
+    @sb.utils.data_pipeline.provides("label", "label_encoded")
+    def label_pipeline(label):
+        yield label
+#        print(speaker_id)
+        label_encoded = label_encoder.encode_label_torch(label)
+        yield label_encoded
+        
 
     # Define datasets. We also connect the dataset with the data processing
     # functions defined above.
@@ -204,17 +201,17 @@ def dataio_prep(hparams):
             json_path=data_info[dataset],
             replacements={"data_root": hparams["data_folder"]},
             dynamic_items=[audio_pipeline, label_pipeline],
-            output_keys=["id", "sig", "emo_encoded"],
+            output_keys=["id", "sig", "label_encoded"],
         )
     # Load or compute the label encoder (with multi-GPU DDP support)
     # Please, take a look into the lab_enc_file to see the label to index
     # mapping.
 
-    lab_enc_file = "label_encoder.txt"
+    lab_enc_file = os.path.join(hparams["save_folder"], "label_encoder.txt")
     label_encoder.load_or_create(
         path=lab_enc_file,
         from_didatasets=[datasets["train"]],
-        output_key="emo",
+        output_key="label",
     )
 
     return datasets
@@ -229,7 +226,7 @@ if __name__ == "__main__":
     sb.utils.distributed.ddp_init_group(run_opts)
 
     # Load hyperparameters file with command-line overrides.
-    with open(hparams_file, encoding="utf-8") as fin:
+    with open(hparams_file) as fin:
         hparams = load_hyperpyyaml(fin, overrides)
 
     # Create experiment directory
@@ -247,9 +244,8 @@ if __name__ == "__main__":
     if not hparams["freeze_wav2vec2"] and hparams["freeze_wav2vec2_conv"]:
         hparams["wav2vec2"].model.feature_extractor._freeze_parameters()
 
-
     # Initialize the Brain object to prepare for mask training.
-    emo_id_brain = EmoIdBrain(
+    speaker_id_brain = SpeakerIdBrain(
         modules=hparams["modules"],
         opt_class=hparams["opt_class"],
         hparams=hparams,
@@ -261,17 +257,11 @@ if __name__ == "__main__":
     # necessary to update the parameters of the model. Since all objects
     # with changing state are managed by the Checkpointer, training can be
     # stopped at any point, and will be resumed on next call.
-    # emo_id_brain.fit(
-    #     epoch_counter=emo_id_brain.hparams.epoch_counter,
-    #     train_set=datasets["train"],
-    #     valid_set=datasets["valid"],
-    #     train_loader_kwargs=hparams["dataloader_options"],
-    #     valid_loader_kwargs=hparams["dataloader_options"],
-    # )
 
     # Load the best checkpoint for evaluation
-    test_stats = emo_id_brain.evaluate(
+    test_stats = speaker_id_brain.evaluate(
         test_set=datasets["test"],
         min_key="error_rate",
         test_loader_kwargs=hparams["dataloader_options"],
-    )
+        )
+

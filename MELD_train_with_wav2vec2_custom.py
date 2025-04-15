@@ -17,8 +17,8 @@ import sys
 from hyperpyyaml import load_hyperpyyaml
 
 import speechbrain as sb
-import torch
-
+import numpy as np
+from MultiClassClassificationMetricStats import MultiClassClassificationMetricStats
 
 class EmoIdBrain(sb.Brain):
     def compute_forward(self, batch, stage):
@@ -47,11 +47,9 @@ class EmoIdBrain(sb.Brain):
         if stage != sb.Stage.TRAIN:
             #self.error_metrics.append(batch.id, predictions, emoid)
 
-            predicted_class = predictions.argmax(dim=-1)
-            ids = batch.id
-            preds = [p.item() for p in predicted_class]
-            targets = [t.item() for t in emoid]
-            self.error_metrics.append(ids, preds, targets)
+            predictions_list = np.argmax(predictions.cpu(), axis=1).tolist()
+            labels_list = emoid.cpu().tolist()
+            self.error_metrics.append(batch.id, predictions_list, labels_list)
 
         return loss
 
@@ -73,7 +71,7 @@ class EmoIdBrain(sb.Brain):
 
         # Set up evaluation-only statistics trackers
         if stage != sb.Stage.TRAIN:
-            self.error_metrics = self.hparams.error_stats()
+            self.error_metrics = MultiClassClassificationMetricStats()
 
     def on_stage_end(self, stage, stage_loss, epoch=None):
         """Gets called at the end of an epoch.
@@ -94,11 +92,19 @@ class EmoIdBrain(sb.Brain):
 
         # Summarize the statistics from the stage for record-keeping.
         else:
+            metric_summary = self.error_metrics.summarize()
+
+            print(metric_summary['error_rate'])
+
             stats = {
                 "loss": stage_loss,
-                #"error_rate": self.error_metrics.summarize("average"),
-                "error_rate\n": self.error_metrics.summarize()["confusion_matrix"],
+                "error_rate": metric_summary['error_rate'],
+                "micro_f1": metric_summary['micro_f1'],
+                "macro_f1": metric_summary['macro_f1'],
+                "mean_precision": metric_summary['mean_precision'],
+                "mean_recall": metric_summary['mean_recall']
             }
+            print(stats)
 
         # At the end of validation...
         if stage == sb.Stage.VALID:
@@ -261,13 +267,13 @@ if __name__ == "__main__":
     # necessary to update the parameters of the model. Since all objects
     # with changing state are managed by the Checkpointer, training can be
     # stopped at any point, and will be resumed on next call.
-    # emo_id_brain.fit(
-    #     epoch_counter=emo_id_brain.hparams.epoch_counter,
-    #     train_set=datasets["train"],
-    #     valid_set=datasets["valid"],
-    #     train_loader_kwargs=hparams["dataloader_options"],
-    #     valid_loader_kwargs=hparams["dataloader_options"],
-    # )
+    emo_id_brain.fit(
+        epoch_counter=emo_id_brain.hparams.epoch_counter,
+        train_set=datasets["train"],
+        valid_set=datasets["valid"],
+        train_loader_kwargs=hparams["dataloader_options"],
+        valid_loader_kwargs=hparams["dataloader_options"],
+    )
 
     # Load the best checkpoint for evaluation
     test_stats = emo_id_brain.evaluate(

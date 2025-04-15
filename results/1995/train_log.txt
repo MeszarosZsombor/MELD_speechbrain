@@ -20,3 +20,20 @@ Epoch: 19, lr: 4.30e-05, wave2vec_lr: 4.30e-06 - train loss: 2.22e-01 - valid lo
 Epoch: 20, lr: 3.87e-05, wave2vec_lr: 3.87e-06 - train loss: 1.75e-01 - valid loss: 4.96, valid error_rate: 8.18e-01
 Epoch: 21, lr: 3.87e-05, wave2vec_lr: 3.87e-06 - train loss: 1.23e-01 - valid loss: 5.31, valid error_rate: 7.92e-01
 Epoch loaded: 17 - test loss: 4.59, test error_rate: 8.14e-01
+Epoch loaded: 17 - test loss: 4.41, test error_rate: 8.54e-01
+Epoch loaded: 17 - test loss: 4.41, test error_rate: 8.54e-01
+Epoch loaded: 17 - test loss: 4.41, test error_rate: tensor([[ 8.,  8.,  4., 12.,  9.,  4.,  5.],
+        [ 7.,  7.,  9., 11.,  9.,  2.,  5.],
+        [ 6.,  8.,  7.,  3., 17.,  3.,  6.],
+        [ 5., 12.,  2., 14.,  8.,  5.,  4.],
+        [ 5., 11.,  7., 13.,  7.,  3.,  4.],
+        [ 9.,  5.,  6.,  9.,  8.,  5.,  8.],
+        [ 6., 16.,  8.,  5.,  6.,  6.,  3.]])
+Epoch loaded: 17 - test loss: 4.41, test error_rate
+: tensor([[ 8.,  8.,  4., 12.,  9.,  4.,  5.],
+        [ 7.,  7.,  9., 11.,  9.,  2.,  5.],
+        [ 6.,  8.,  7.,  3., 17.,  3.,  6.],
+        [ 5., 12.,  2., 14.,  8.,  5.,  4.],
+        [ 5., 11.,  7., 13.,  7.,  3.,  4.],
+        [ 9.,  5.,  6.,  9.,  8.,  5.,  8.],
+        [ 6., 16.,  8.,  5.,  6.,  6.,  3.]])

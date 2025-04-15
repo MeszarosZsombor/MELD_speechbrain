@@ -757,3 +757,1507 @@ WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.1
 2025-04-09 11:57:20,576 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
 2025-04-09 11:57:20,576 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
 2025-04-09 11:57:27,195 - speechbrain.utils.train_logger - INFO - Epoch loaded: 17 - test loss: 4.59, test error_rate: 8.14e-01
+2025-04-15 19:30:48,690 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_cudnn_benchmarking, disable_jit_profiling]
+2025-04-15 19:30:48,690 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-15 19:30:48,691 - speechbrain.core - INFO - Beginning experiment!
+2025-04-15 19:30:48,691 - speechbrain.core - INFO - Experiment folder: results/1995
+2025-04-15 19:30:48,837 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 6579
+2025-04-15 19:30:49,003 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F10 HTTP/1.1" 200 6725
+2025-04-15 19:30:49,099 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+cryptography==3.4.8
+cupshelpers==1.0
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-15 19:30:49,101 - speechbrain.utils.superpowers - DEBUG - 8b7f84c
+
+
+2025-04-15 19:30:49,102 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-15 19:30:49,102 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-15 19:30:49,109 - speechbrain.dataio.encoder - DEBUG - Would load categorical encoding from label_encoder.txt, but file doesn't exist yet.
+2025-04-15 19:30:49,113 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-15 19:30:49,114 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:30:49,145 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-15 19:30:49,287 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors HTTP/1.1" 302 0
+2025-04-15 19:30:51,196 - speechbrain.core - INFO - Info: ckpt_interval_minutes arg from hparam file is used
+2025-04-15 19:30:51,198 - speechbrain.core - INFO - Gradscaler enabled: False. Using precision: fp32.
+2025-04-15 19:30:51,199 - speechbrain.core - INFO - EmoIdBrain Model Statistics:
+* Total Number of Trainable Parameters: 90.2M
+* Total Number of Parameters: 94.4M
+* Trainable Parameters represent 95.5493% of the total size.
+2025-04-15 19:30:51,204 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results/1995/save/CKPT+2025-04-09+11-51-08+00
+2025-04-15 19:30:52,413 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:30:52,414 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:30:59,067 - speechbrain.utils.train_logger - INFO - Epoch loaded: 17 - test loss: 4.41, test error_rate: 8.54e-01
+2025-04-15 19:50:19,137 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, disable_cudnn_benchmarking, allow_tf32]
+2025-04-15 19:50:19,137 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-15 19:50:19,137 - speechbrain.core - INFO - Beginning experiment!
+2025-04-15 19:50:19,137 - speechbrain.core - INFO - Experiment folder: results/1995
+2025-04-15 19:50:19,151 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/main HTTP/1.1" 200 5760
+2025-04-15 19:50:19,305 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 6579
+2025-04-15 19:50:19,435 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+cryptography==3.4.8
+cupshelpers==1.0
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-15 19:50:19,436 - speechbrain.utils.superpowers - DEBUG - 8b7f84c
+
+
+2025-04-15 19:50:19,437 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-15 19:50:19,437 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-15 19:50:19,445 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:50:19,445 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-15 19:50:19,445 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:50:19,520 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F10 HTTP/1.1" 200 6725
+2025-04-15 19:50:19,655 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-15 19:50:19,755 - speechbrain.core - INFO - Info: ckpt_interval_minutes arg from hparam file is used
+2025-04-15 19:50:19,758 - speechbrain.core - INFO - Gradscaler enabled: False. Using precision: fp32.
+2025-04-15 19:50:19,758 - speechbrain.core - INFO - EmoIdBrain Model Statistics:
+* Total Number of Trainable Parameters: 90.2M
+* Total Number of Parameters: 94.4M
+* Trainable Parameters represent 95.5493% of the total size.
+2025-04-15 19:50:19,760 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results/1995/save/CKPT+2025-04-09+11-51-08+00
+2025-04-15 19:50:19,789 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors HTTP/1.1" 302 0
+2025-04-15 19:50:20,379 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:50:20,380 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:50:27,133 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "/home/zsombor/MELD_speechbrain/train_with_wav2vec2.py", line 266, in <module>
+    test_stats = emo_id_brain.evaluate(
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/core.py", line 1806, in evaluate
+    self.on_stage_end(Stage.TEST, avg_test_loss, None)
+  File "/home/zsombor/MELD_speechbrain/train_with_wav2vec2.py", line 93, in on_stage_end
+    "error_rate": self.error_metrics.summarize("average"),
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/utils/metric_stats.py", line 1066, in summarize
+    self._build_lookups()
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/utils/metric_stats.py", line 1094, in _build_lookups
+    sorted(set(prediction for prediction in self.predictions))
+RuntimeError: Boolean value of Tensor with more than one value is ambiguous
+2025-04-15 19:55:19,995 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling, disable_cudnn_benchmarking]
+2025-04-15 19:55:19,995 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-15 19:55:19,995 - speechbrain.core - INFO - Beginning experiment!
+2025-04-15 19:55:19,996 - speechbrain.core - INFO - Experiment folder: results/1995
+2025-04-15 19:55:20,028 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/main HTTP/1.1" 200 5760
+2025-04-15 19:55:20,180 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 6579
+2025-04-15 19:55:20,289 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+cryptography==3.4.8
+cupshelpers==1.0
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-15 19:55:20,290 - speechbrain.utils.superpowers - DEBUG - 8b7f84c
+
+
+2025-04-15 19:55:20,291 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-15 19:55:20,291 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-15 19:55:20,296 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:55:20,296 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-15 19:55:20,296 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:55:20,338 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F10 HTTP/1.1" 200 6725
+2025-04-15 19:55:20,479 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-15 19:55:20,621 - speechbrain.core - INFO - Info: ckpt_interval_minutes arg from hparam file is used
+2025-04-15 19:55:20,621 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors HTTP/1.1" 302 0
+2025-04-15 19:55:20,624 - speechbrain.core - INFO - Gradscaler enabled: False. Using precision: fp32.
+2025-04-15 19:55:20,625 - speechbrain.core - INFO - EmoIdBrain Model Statistics:
+* Total Number of Trainable Parameters: 90.2M
+* Total Number of Parameters: 94.4M
+* Trainable Parameters represent 95.5493% of the total size.
+2025-04-15 19:55:20,626 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results/1995/save/CKPT+2025-04-09+11-51-08+00
+2025-04-15 19:55:21,370 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:55:21,370 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:55:21,755 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "/home/zsombor/MELD_speechbrain/train_with_wav2vec2.py", line 270, in <module>
+    test_stats = emo_id_brain.evaluate(
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/core.py", line 1799, in evaluate
+    loss = self.evaluate_batch(batch, stage=Stage.TEST)
+  File "/home/zsombor/.local/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/core.py", line 1409, in evaluate_batch
+    loss = self.compute_objectives(out, batch, stage=stage)
+  File "/home/zsombor/MELD_speechbrain/train_with_wav2vec2.py", line 52, in compute_objectives
+    self.error_metrics.append(id, pred.item(), true.item())
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/utils/metric_stats.py", line 1032, in append
+    self.predictions.extend(predictions)
+TypeError: 'int' object is not iterable
+2025-04-15 19:56:24,408 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_cudnn_benchmarking, allow_tf32, disable_jit_profiling]
+2025-04-15 19:56:24,408 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-15 19:56:24,408 - speechbrain.core - INFO - Beginning experiment!
+2025-04-15 19:56:24,409 - speechbrain.core - INFO - Experiment folder: results/1995
+2025-04-15 19:56:24,432 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/main HTTP/1.1" 200 5760
+2025-04-15 19:56:24,590 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 6579
+2025-04-15 19:56:24,720 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+cryptography==3.4.8
+cupshelpers==1.0
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-15 19:56:24,722 - speechbrain.utils.superpowers - DEBUG - 8b7f84c
+
+
+2025-04-15 19:56:24,723 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-15 19:56:24,723 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-15 19:56:24,727 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:56:24,727 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-15 19:56:24,727 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:56:24,776 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F10 HTTP/1.1" 200 6725
+2025-04-15 19:56:24,917 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-15 19:56:25,038 - speechbrain.core - INFO - Info: ckpt_interval_minutes arg from hparam file is used
+2025-04-15 19:56:25,040 - speechbrain.core - INFO - Gradscaler enabled: False. Using precision: fp32.
+2025-04-15 19:56:25,040 - speechbrain.core - INFO - EmoIdBrain Model Statistics:
+* Total Number of Trainable Parameters: 90.2M
+* Total Number of Parameters: 94.4M
+* Trainable Parameters represent 95.5493% of the total size.
+2025-04-15 19:56:25,041 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results/1995/save/CKPT+2025-04-09+11-51-08+00
+2025-04-15 19:56:25,059 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors HTTP/1.1" 302 0
+2025-04-15 19:56:25,231 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:56:25,233 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:56:31,702 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "/home/zsombor/MELD_speechbrain/train_with_wav2vec2.py", line 272, in <module>
+    test_stats = emo_id_brain.evaluate(
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/core.py", line 1806, in evaluate
+    self.on_stage_end(Stage.TEST, avg_test_loss, None)
+  File "/home/zsombor/MELD_speechbrain/train_with_wav2vec2.py", line 99, in on_stage_end
+    "error_rate": self.error_metrics.summarize("average"),
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/utils/metric_stats.py", line 1081, in summarize
+    return self.summary[field]
+KeyError: 'average'
+2025-04-15 19:58:02,162 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_cudnn_benchmarking, allow_tf32, disable_jit_profiling]
+2025-04-15 19:58:02,162 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-15 19:58:02,162 - speechbrain.core - INFO - Beginning experiment!
+2025-04-15 19:58:02,162 - speechbrain.core - INFO - Experiment folder: results/1995
+2025-04-15 19:58:02,183 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/main HTTP/1.1" 200 5760
+2025-04-15 19:58:02,340 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 6579
+2025-04-15 19:58:02,454 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+cryptography==3.4.8
+cupshelpers==1.0
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-15 19:58:02,455 - speechbrain.utils.superpowers - DEBUG - 8b7f84c
+
+
+2025-04-15 19:58:02,456 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-15 19:58:02,456 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-15 19:58:02,461 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:58:02,461 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-15 19:58:02,461 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:58:02,503 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F10 HTTP/1.1" 200 6725
+2025-04-15 19:58:02,639 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-15 19:58:02,783 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors HTTP/1.1" 302 0
+2025-04-15 19:58:02,782 - speechbrain.core - INFO - Info: ckpt_interval_minutes arg from hparam file is used
+2025-04-15 19:58:02,785 - speechbrain.core - INFO - Gradscaler enabled: False. Using precision: fp32.
+2025-04-15 19:58:02,786 - speechbrain.core - INFO - EmoIdBrain Model Statistics:
+* Total Number of Trainable Parameters: 90.2M
+* Total Number of Parameters: 94.4M
+* Trainable Parameters represent 95.5493% of the total size.
+2025-04-15 19:58:02,787 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results/1995/save/CKPT+2025-04-09+11-51-08+00
+2025-04-15 19:58:02,973 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:58:02,975 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:58:09,453 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "/home/zsombor/MELD_speechbrain/train_with_wav2vec2.py", line 277, in <module>
+    test_stats = emo_id_brain.evaluate(
+  File "/home/zsombor/.local/lib/python3.10/site-packages/speechbrain/core.py", line 1806, in evaluate
+    self.on_stage_end(Stage.TEST, avg_test_loss, None)
+  File "/home/zsombor/MELD_speechbrain/train_with_wav2vec2.py", line 98, in on_stage_end
+    correct = summary["correct"]
+KeyError: 'correct'
+2025-04-15 19:59:10,666 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_cudnn_benchmarking, allow_tf32, disable_jit_profiling]
+2025-04-15 19:59:10,666 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-15 19:59:10,666 - speechbrain.core - INFO - Beginning experiment!
+2025-04-15 19:59:10,666 - speechbrain.core - INFO - Experiment folder: results/1995
+2025-04-15 19:59:10,686 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/main HTTP/1.1" 200 5760
+2025-04-15 19:59:10,849 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 6579
+2025-04-15 19:59:10,969 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+cryptography==3.4.8
+cupshelpers==1.0
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-15 19:59:10,971 - speechbrain.utils.superpowers - DEBUG - 8b7f84c
+
+
+2025-04-15 19:59:10,971 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-15 19:59:10,971 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-15 19:59:10,976 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:59:10,976 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-15 19:59:10,976 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:59:11,027 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F10 HTTP/1.1" 200 6725
+2025-04-15 19:59:11,162 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-15 19:59:11,292 - speechbrain.core - INFO - Info: ckpt_interval_minutes arg from hparam file is used
+2025-04-15 19:59:11,294 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors HTTP/1.1" 302 0
+2025-04-15 19:59:11,294 - speechbrain.core - INFO - Gradscaler enabled: False. Using precision: fp32.
+2025-04-15 19:59:11,295 - speechbrain.core - INFO - EmoIdBrain Model Statistics:
+* Total Number of Trainable Parameters: 90.2M
+* Total Number of Parameters: 94.4M
+* Trainable Parameters represent 95.5493% of the total size.
+2025-04-15 19:59:11,296 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results/1995/save/CKPT+2025-04-09+11-51-08+00
+2025-04-15 19:59:11,474 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:59:11,475 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:59:17,961 - speechbrain.utils.train_logger - INFO - Epoch loaded: 17 - test loss: 4.41, test error_rate: 8.54e-01
+2025-04-15 19:59:54,761 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_cudnn_benchmarking, allow_tf32, disable_jit_profiling]
+2025-04-15 19:59:54,761 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-15 19:59:54,761 - speechbrain.core - INFO - Beginning experiment!
+2025-04-15 19:59:54,761 - speechbrain.core - INFO - Experiment folder: results/1995
+2025-04-15 19:59:54,975 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/main HTTP/1.1" 200 5760
+2025-04-15 19:59:55,055 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+cryptography==3.4.8
+cupshelpers==1.0
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-15 19:59:55,056 - speechbrain.utils.superpowers - DEBUG - 8b7f84c
+
+
+2025-04-15 19:59:55,057 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-15 19:59:55,057 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-15 19:59:55,061 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:59:55,061 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-15 19:59:55,061 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 19:59:55,124 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 6579
+2025-04-15 19:59:55,283 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F10 HTTP/1.1" 200 6725
+2025-04-15 19:59:55,371 - speechbrain.core - INFO - Info: ckpt_interval_minutes arg from hparam file is used
+2025-04-15 19:59:55,373 - speechbrain.core - INFO - Gradscaler enabled: False. Using precision: fp32.
+2025-04-15 19:59:55,374 - speechbrain.core - INFO - EmoIdBrain Model Statistics:
+* Total Number of Trainable Parameters: 90.2M
+* Total Number of Parameters: 94.4M
+* Trainable Parameters represent 95.5493% of the total size.
+2025-04-15 19:59:55,375 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results/1995/save/CKPT+2025-04-09+11-51-08+00
+2025-04-15 19:59:55,420 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-15 19:59:55,557 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:59:55,558 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 19:59:55,558 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors HTTP/1.1" 302 0
+2025-04-15 20:00:02,048 - speechbrain.utils.train_logger - INFO - Epoch loaded: 17 - test loss: 4.41, test error_rate: tensor([[ 8.,  8.,  4., 12.,  9.,  4.,  5.],
+        [ 7.,  7.,  9., 11.,  9.,  2.,  5.],
+        [ 6.,  8.,  7.,  3., 17.,  3.,  6.],
+        [ 5., 12.,  2., 14.,  8.,  5.,  4.],
+        [ 5., 11.,  7., 13.,  7.,  3.,  4.],
+        [ 9.,  5.,  6.,  9.,  8.,  5.,  8.],
+        [ 6., 16.,  8.,  5.,  6.,  6.,  3.]])
+2025-04-15 20:00:49,189 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32, disable_cudnn_benchmarking]
+2025-04-15 20:00:49,189 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-15 20:00:49,189 - speechbrain.core - INFO - Beginning experiment!
+2025-04-15 20:00:49,189 - speechbrain.core - INFO - Experiment folder: results/1995
+2025-04-15 20:00:49,217 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/main HTTP/1.1" 200 5760
+2025-04-15 20:00:49,368 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 6579
+2025-04-15 20:00:49,486 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+cryptography==3.4.8
+cupshelpers==1.0
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-15 20:00:49,487 - speechbrain.utils.superpowers - DEBUG - 8b7f84c
+
+
+2025-04-15 20:00:49,488 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-15 20:00:49,488 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-15 20:00:49,493 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 20:00:49,493 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-15 20:00:49,493 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-15 20:00:49,528 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F10 HTTP/1.1" 200 6725
+2025-04-15 20:00:49,665 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-15 20:00:49,799 - speechbrain.core - INFO - Info: ckpt_interval_minutes arg from hparam file is used
+2025-04-15 20:00:49,801 - speechbrain.core - INFO - Gradscaler enabled: False. Using precision: fp32.
+2025-04-15 20:00:49,801 - speechbrain.core - INFO - EmoIdBrain Model Statistics:
+* Total Number of Trainable Parameters: 90.2M
+* Total Number of Parameters: 94.4M
+* Trainable Parameters represent 95.5493% of the total size.
+2025-04-15 20:00:49,802 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results/1995/save/CKPT+2025-04-09+11-51-08+00
+2025-04-15 20:00:49,803 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F10/model.safetensors HTTP/1.1" 302 0
+2025-04-15 20:00:49,987 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 20:00:49,988 - speechbrain.dataio.encoder - WARNING - CategoricalEncoder.expect_len was never called: assuming category count of 7 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
+2025-04-15 20:00:56,452 - speechbrain.utils.train_logger - INFO - Epoch loaded: 17 - test loss: 4.41, test error_rate
+: tensor([[ 8.,  8.,  4., 12.,  9.,  4.,  5.],
+        [ 7.,  7.,  9., 11.,  9.,  2.,  5.],
+        [ 6.,  8.,  7.,  3., 17.,  3.,  6.],
+        [ 5., 12.,  2., 14.,  8.,  5.,  4.],
+        [ 5., 11.,  7., 13.,  7.,  3.,  4.],
+        [ 9.,  5.,  6.,  9.,  8.,  5.,  8.],
+        [ 6., 16.,  8.,  5.,  6.,  6.,  3.]])

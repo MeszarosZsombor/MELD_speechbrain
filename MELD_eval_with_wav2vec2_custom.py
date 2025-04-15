@@ -13,12 +13,24 @@ Authors
 
 import os
 import sys
-
+import json
 from hyperpyyaml import load_hyperpyyaml
-
 import speechbrain as sb
-import torch
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from MultiClassClassificationMetricStats import MultiClassClassificationMetricStats
 
+def load_label_encoder(path):
+    label_map = {}
+    with open(path, "r") as f:
+        for line in f:
+            if "=>" in line and "starting_index" not in line:
+                parts = line.strip().split("=>")
+                label = parts[0].strip().strip("'")
+                index = int(parts[1])
+                label_map[index] = label
+    return [label_map[i] for i in sorted(label_map.keys())]
 
 class EmoIdBrain(sb.Brain):
     def compute_forward(self, batch, stage):
@@ -47,11 +59,25 @@ class EmoIdBrain(sb.Brain):
         if stage != sb.Stage.TRAIN:
             #self.error_metrics.append(batch.id, predictions, emoid)
 
-            predicted_class = predictions.argmax(dim=-1)
-            ids = batch.id
-            preds = [p.item() for p in predicted_class]
-            targets = [t.item() for t in emoid]
-            self.error_metrics.append(ids, preds, targets)
+            predictions_list = np.argmax(predictions.cpu(), axis=1).tolist()
+            labels_list = emoid.cpu().tolist()
+            self.error_metrics.append(batch.id, predictions_list, labels_list)
+
+            if stage == sb.Stage.TEST:
+                predicted_class = predictions.argmax(dim=-1)
+                for i, id in enumerate(batch.id):
+                    log_post = predictions[i].detach().cpu().numpy()
+                    log_post_dict = {cls: float(log_post[j]) for j, cls in enumerate(self.class_names)}
+                    predicted_label = self.class_names[predicted_class[i].item()]
+
+                    if not hasattr(self, "prediction_log"):
+                        self.prediction_log = {}
+
+                    self.prediction_log[id] = {
+                        "log_posteriors": log_post_dict,
+                        "log_posteriors_array": log_post.tolist(),
+                        "predicted_class": predicted_label,
+                    }
 
         return loss
 
@@ -71,9 +97,11 @@ class EmoIdBrain(sb.Brain):
             metric=sb.nnet.losses.nll_loss
         )
 
+        self.class_names = load_label_encoder("label_encoder.txt")
+
         # Set up evaluation-only statistics trackers
         if stage != sb.Stage.TRAIN:
-            self.error_metrics = self.hparams.error_stats()
+            self.error_metrics = MultiClassClassificationMetricStats()
 
     def on_stage_end(self, stage, stage_loss, epoch=None):
         """Gets called at the end of an epoch.
@@ -94,11 +122,19 @@ class EmoIdBrain(sb.Brain):
 
         # Summarize the statistics from the stage for record-keeping.
         else:
+            metric_summary = self.error_metrics.summarize()
+
+            print(metric_summary['error_rate'])
+
             stats = {
                 "loss": stage_loss,
-                #"error_rate": self.error_metrics.summarize("average"),
-                "error_rate\n": self.error_metrics.summarize()["confusion_matrix"],
+                "error_rate": metric_summary['error_rate'],
+                "micro_f1": metric_summary['micro_f1'],
+                "macro_f1": metric_summary['macro_f1'],
+                "mean_precision": metric_summary['mean_precision'],
+                "mean_recall": metric_summary['mean_recall']
             }
+            print(stats)
 
         # At the end of validation...
         if stage == sb.Stage.VALID:
@@ -131,6 +167,25 @@ class EmoIdBrain(sb.Brain):
                 {"Epoch loaded": self.hparams.epoch_counter.current},
                 test_stats=stats,
             )
+
+            summary = self.error_metrics.summarize()
+
+            if "confusion_matrix" in summary:
+                conf_mat = np.array(summary["confusion_matrix"])
+                plt.figure(figsize=(10, 8))
+                sns.heatmap(conf_mat, annot=True, fmt="d", cmap="Blues")
+                plt.xlabel("Predicted label")
+                plt.ylabel("True label")
+                plt.title("Confusion Matrix")
+                plt.tight_layout()
+                plt.savefig(hparams["output_folder"] + "/confusion_matrix.png")
+                plt.close()
+                print("Confusion matrix saved as '" + hparams['output_folder'] + "/confusion_matrix.png'")
+
+            if hasattr(self, "prediction_log"):
+                with open(hparams["output_folder"] + "/prediction_outputs.json", "w") as f:
+                    json.dump(self.prediction_log, f, indent=4)
+                print("Prediction log saved to 'prediction_outputs.json'")
 
     def init_optimizers(self):
         "Initializes the wav2vec2 optimizer and model optimizer"
@@ -257,17 +312,6 @@ if __name__ == "__main__":
         checkpointer=hparams["checkpointer"],
     )
 
-    # The `fit()` method iterates the training loop, calling the methods
-    # necessary to update the parameters of the model. Since all objects
-    # with changing state are managed by the Checkpointer, training can be
-    # stopped at any point, and will be resumed on next call.
-    # emo_id_brain.fit(
-    #     epoch_counter=emo_id_brain.hparams.epoch_counter,
-    #     train_set=datasets["train"],
-    #     valid_set=datasets["valid"],
-    #     train_loader_kwargs=hparams["dataloader_options"],
-    #     valid_loader_kwargs=hparams["dataloader_options"],
-    # )
 
     # Load the best checkpoint for evaluation
     test_stats = emo_id_brain.evaluate(
