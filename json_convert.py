@@ -137,4 +137,47 @@ def label_predictions(train_json, predictions_json, output_json):
 
     print(f"Done! Output: {output_json}")
 
-label_predictions("jsons/ds_test.json", "results/567422/prediction_outputs.json", "results/567422/labels.json")
+label_predictions("jsons/dsto2_test.json", "results/9999/prediction_outputs.json", "results/9999/labels.json")
+
+def downsample_neu_to_second_largest(count_json, wav_json, output_json):
+    with open(count_json, "r", encoding="utf-8") as f:
+        count_data = json.load(f)
+
+    with open(wav_json, "r", encoding="utf-8") as f:
+        wav_data = json.load(f)
+
+    emotion_counts = count_data["emotion"]
+    sorted_counts = sorted(emotion_counts.items(), key=lambda x: x[1], reverse=True)
+
+    neu_count = emotion_counts["NEU"]
+    second_largest_count = sorted_counts[1][1]
+
+    print(f"NEU count: {neu_count}, Second largest count: {second_largest_count}")
+
+    emotion_groups = defaultdict(list)
+    for wav_filename, metadata in wav_data.items():
+        emotion = metadata["emotion"]
+        emotion_groups[emotion].append((wav_filename, metadata))
+
+    downsampled = {}
+
+    for emotion, samples in emotion_groups.items():
+        if emotion == "NEU":
+            if len(samples) <= second_largest_count:
+                print(f"[INFO] NEU already <= second largest ({len(samples)} <= {second_largest_count})")
+                selected = samples
+            else:
+                selected = random.sample(samples, second_largest_count)
+                print(f"[INFO] Downsampling NEU from {len(samples)} to {second_largest_count}")
+        else:
+            selected = samples
+
+        for fname, meta in selected:
+            downsampled[fname] = meta
+
+    with open(output_json, "w", encoding="utf-8") as f:
+        json.dump(downsampled, f, indent=4, ensure_ascii=False)
+
+    print(f"Done! Output saved to {output_json}")
+
+#downsample_neu_to_second_largest("jsons/counter_test.json", "jsons/test.json", "jsons/dsto2_test.json")

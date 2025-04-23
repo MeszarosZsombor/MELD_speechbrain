@@ -169,18 +169,19 @@ class EmoIdBrain(sb.Brain):
             )
 
             summary = self.error_metrics.summarize()
+            self.class_names = load_label_encoder("label_encoder.txt")
 
-            if "confusion_matrix" in summary:
-                conf_mat = np.array(summary["confusion_matrix"])
-                plt.figure(figsize=(10, 8))
-                sns.heatmap(conf_mat, annot=True, fmt="d", cmap="Blues")
-                plt.xlabel("Predicted label")
-                plt.ylabel("True label")
-                plt.title("Confusion Matrix")
-                plt.tight_layout()
-                plt.savefig(hparams["output_folder"] + "/confusion_matrix.png")
-                plt.close()
-                print("Confusion matrix saved as '" + hparams['output_folder'] + "/confusion_matrix.png'")
+            # if "confusion_matrix" in summary:
+            #     conf_mat = np.array(summary["confusion_matrix"])
+            #     plt.figure(figsize=(10, 8))
+            #     sns.heatmap(conf_mat, annot=True, fmt="d", cmap="Blues", xticklabels=self.class_names, yticklabels=self.class_names)
+            #     plt.xlabel("Predicted label")
+            #     plt.ylabel("True label")
+            #     plt.title("Confusion Matrix")
+            #     plt.tight_layout()
+            #     plt.savefig(hparams["output_folder"] + "/confusion_matrix.png")
+            #     plt.close()
+            #     print("Confusion matrix saved as '" + hparams['output_folder'] + "/confusion_matrix.png'")
 
             if hasattr(self, "prediction_log"):
                 with open(hparams["output_folder"] + "/prediction_outputs.json", "w") as f:
@@ -316,6 +317,7 @@ if __name__ == "__main__":
     # Load the best checkpoint for evaluation
     test_stats = emo_id_brain.evaluate(
         test_set=datasets["test"],
-        min_key="error_rate",
+        #min_key="error_rate",
+        max_key="macro_f1",
         test_loader_kwargs=hparams["dataloader_options"],
     )
