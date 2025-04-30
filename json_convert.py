@@ -124,7 +124,7 @@ def label_predictions(train_json, predictions_json, output_json):
     for wav_file, meta in train_data.items():
         if wav_file in pred_data:
             predicted = pred_data[wav_file]["predicted_class"]
-            true_label = meta["emotion"]
+            true_label = meta["sentiment"]
 
             results[wav_file] = {
                 "true_label": true_label,
@@ -137,7 +137,7 @@ def label_predictions(train_json, predictions_json, output_json):
 
     print(f"Done! Output: {output_json}")
 
-label_predictions("jsons/dsto2_test.json", "results/9999/prediction_outputs.json", "results/9999/labels.json")
+label_predictions("jsons/dsto2_sen_test.json", "results/666632222/prediction_outputs.json", "results/666632222/sentiment_pred.json")
 
 def downsample_neu_to_second_largest(count_json, wav_json, output_json):
     with open(count_json, "r", encoding="utf-8") as f:
@@ -146,7 +146,7 @@ def downsample_neu_to_second_largest(count_json, wav_json, output_json):
     with open(wav_json, "r", encoding="utf-8") as f:
         wav_data = json.load(f)
 
-    emotion_counts = count_data["emotion"]
+    emotion_counts = count_data["sentiment"]
     sorted_counts = sorted(emotion_counts.items(), key=lambda x: x[1], reverse=True)
 
     neu_count = emotion_counts["NEU"]
@@ -156,7 +156,7 @@ def downsample_neu_to_second_largest(count_json, wav_json, output_json):
 
     emotion_groups = defaultdict(list)
     for wav_filename, metadata in wav_data.items():
-        emotion = metadata["emotion"]
+        emotion = metadata["sentiment"]
         emotion_groups[emotion].append((wav_filename, metadata))
 
     downsampled = {}
@@ -180,4 +180,4 @@ def downsample_neu_to_second_largest(count_json, wav_json, output_json):
 
     print(f"Done! Output saved to {output_json}")
 
-#downsample_neu_to_second_largest("jsons/counter_test.json", "jsons/test.json", "jsons/dsto2_test.json")
+#downsample_neu_to_second_largest("jsons/counter_train.json", "jsons/train.json", "jsons/dsto2_sen_train.json")
