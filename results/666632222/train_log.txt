@@ -22,3 +22,5 @@ Epoch loaded: 3 - test loss: 1.08, test error_rate: 5.87e-01, test micro_f1: 1.9
 Epoch loaded: 20 - test loss: 3.10, test error_rate: 6.22e-01, test micro_f1: 1.47e-01, test macro_f1: 0.36314988136291504, test mean_precision: 0.36367395520210266, test mean_recall: 0.3630649149417877
 Epoch loaded: 3 - test loss: 1.08, test error_rate: 5.87e-01, test micro_f1: 1.99e-01, test macro_f1: 0.30315205454826355, test mean_precision: 0.38358139991760254, test mean_recall: 0.36282792687416077
 Epoch loaded: 20 - test loss: 3.10, test error_rate: 6.22e-01, test micro_f1: 1.47e-01, test macro_f1: 0.36314988136291504, test mean_precision: 0.36367395520210266, test mean_recall: 0.3630649149417877
+Epoch loaded: 20 - test loss: 3.10, test error_rate: 6.22e-01, test micro_f1: 1.47e-01, test macro_f1: 0.36314988136291504, test mean_precision: 0.36367395520210266, test mean_recall: 0.3630649149417877
+Epoch loaded: 3 - test loss: 1.08, test error_rate: 5.87e-01, test micro_f1: 1.99e-01, test macro_f1: 0.30315205454826355, test mean_precision: 0.38358139991760254, test mean_recall: 0.36282792687416077

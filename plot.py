@@ -101,4 +101,4 @@ def confusion_matrix_plot(input_json, output_folder="plots", normalized="true"):
 
 #metrics = parse_train_log("results/666632222/train_log.txt")
 #plot_metrics(metrics, "results/666632222/plots")
-confusion_matrix_plot("results/666632222/min_sentiment_pred.json", "results/666632222/plots/", "true")
+confusion_matrix_plot("results/666632222/sentiment_pred.json", "results/666632222/plots/", "true")
