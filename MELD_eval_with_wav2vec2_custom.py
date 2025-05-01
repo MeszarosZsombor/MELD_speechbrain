@@ -317,7 +317,7 @@ if __name__ == "__main__":
     # Load the best checkpoint for evaluation
     test_stats = emo_id_brain.evaluate(
         test_set=datasets["test"],
-        #min_key="error_rate",
-        max_key="macro_f1",
+        min_key="error_rate",
+        #max_key="macro_f1",
         test_loader_kwargs=hparams["dataloader_options"],
     )

@@ -184,9 +184,9 @@ class EmoIdBrain(sb.Brain):
             #     print("Confusion matrix saved as '" + hparams['output_folder'] + "/confusion_matrix.png'")
 
             if hasattr(self, "prediction_log"):
-                with open(hparams["output_folder"] + "/prediction_outputs.json", "w") as f:
+                with open(hparams["output_folder"] + "/ds_prediction_outputs.json", "w") as f:
                     json.dump(self.prediction_log, f, indent=4)
-                print("Prediction log saved to 'prediction_outputs.json'")
+                print("Prediction log saved to 'ds_prediction_outputs.json'")
 
     def init_optimizers(self):
         "Initializes the wav2vec2 optimizer and model optimizer"

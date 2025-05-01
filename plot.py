@@ -99,6 +99,6 @@ def confusion_matrix_plot(input_json, output_folder="plots", normalized="true"):
         plt.savefig(f"{output_folder}/confusion_matrix.png")
         plt.close()
 
-#metrics = parse_train_log("results/666632222/train_log.txt")
-#plot_metrics(metrics, "results/666632222/plots")
-confusion_matrix_plot("results/666632222/sentiment_pred.json", "results/666632222/plots/", "false")
+metrics = parse_train_log("results/5674/train_log.txt")
+plot_metrics(metrics, "results/5674/plots")
+confusion_matrix_plot("results/5674/sentiment_pred.json", "results/5674/plots/", "true")
