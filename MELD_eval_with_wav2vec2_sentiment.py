@@ -50,17 +50,17 @@ class EmoIdBrain(sb.Brain):
 
     def compute_objectives(self, predictions, batch, stage):
         """Computes the loss using speaker-id as label."""
-        emoid, _ = batch.emo_encoded
+        senid, _ = batch.sen_encoded
         #print(torch.cuda.memory_summary(device="cuda", abbreviated=True))
 
         """to meet the input form of nll loss"""
-        emoid = emoid.squeeze(1)
-        loss = self.hparams.compute_cost(predictions, emoid)
+        senid = senid.squeeze(1)
+        loss = self.hparams.compute_cost(predictions, senid)
         if stage != sb.Stage.TRAIN:
             #self.error_metrics.append(batch.id, predictions, emoid)
 
             predictions_list = np.argmax(predictions.cpu(), axis=1).tolist()
-            labels_list = emoid.cpu().tolist()
+            labels_list = senid.cpu().tolist()
             self.error_metrics.append(batch.id, predictions_list, labels_list)
 
             if stage == sb.Stage.TEST:
@@ -184,9 +184,9 @@ class EmoIdBrain(sb.Brain):
             #     print("Confusion matrix saved as '" + hparams['output_folder'] + "/confusion_matrix.png'")
 
             if hasattr(self, "prediction_log"):
-                with open(hparams["output_folder"] + "/prediction_outputs.json", "w") as f:
+                with open(hparams["output_folder"] + "/ds_prediction_outputs.json", "w") as f:
                     json.dump(self.prediction_log, f, indent=4)
-                print("Prediction log saved to 'prediction_outputs.json'")
+                print("Prediction log saved to 'ds_prediction_outputs.json'")
 
     def init_optimizers(self):
         "Initializes the wav2vec2 optimizer and model optimizer"
@@ -240,12 +240,12 @@ def dataio_prep(hparams):
     label_encoder = sb.dataio.encoder.CategoricalEncoder()
 
     # Define label pipeline:
-    @sb.utils.data_pipeline.takes("emotion")
-    @sb.utils.data_pipeline.provides("emo", "emo_encoded")
-    def label_pipeline(emo):
-        yield emo
-        emo_encoded = label_encoder.encode_label_torch(emo)
-        yield emo_encoded
+    @sb.utils.data_pipeline.takes("sentiment")
+    @sb.utils.data_pipeline.provides("sen", "sen_encoded")
+    def label_pipeline(sen):
+        yield sen
+        sen_encoded = label_encoder.encode_label_torch(sen)
+        yield sen_encoded
 
     # Define datasets. We also connect the dataset with the data processing
     # functions defined above.
@@ -260,7 +260,7 @@ def dataio_prep(hparams):
             json_path=data_info[dataset],
             replacements={"data_root": hparams["data_folder"]},
             dynamic_items=[audio_pipeline, label_pipeline],
-            output_keys=["id", "sig", "emo_encoded"],
+            output_keys=["id", "sig", "sen_encoded"],
         )
     # Load or compute the label encoder (with multi-GPU DDP support)
     # Please, take a look into the lab_enc_file to see the label to index
@@ -270,7 +270,7 @@ def dataio_prep(hparams):
     label_encoder.load_or_create(
         path=lab_enc_file,
         from_didatasets=[datasets["train"]],
-        output_key="emo",
+        output_key="sen",
     )
 
     return datasets

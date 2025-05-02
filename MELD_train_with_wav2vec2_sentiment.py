@@ -13,24 +13,12 @@ Authors
 
 import os
 import sys
-import json
+
 from hyperpyyaml import load_hyperpyyaml
+
 import speechbrain as sb
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 from MultiClassClassificationMetricStats import MultiClassClassificationMetricStats
-
-def load_label_encoder(path):
-    label_map = {}
-    with open(path, "r") as f:
-        for line in f:
-            if "=>" in line and "starting_index" not in line:
-                parts = line.strip().split("=>")
-                label = parts[0].strip().strip("'")
-                index = int(parts[1])
-                label_map[index] = label
-    return [label_map[i] for i in sorted(label_map.keys())]
 
 class EmoIdBrain(sb.Brain):
     def compute_forward(self, batch, stage):
@@ -50,34 +38,18 @@ class EmoIdBrain(sb.Brain):
 
     def compute_objectives(self, predictions, batch, stage):
         """Computes the loss using speaker-id as label."""
-        emoid, _ = batch.emo_encoded
+        senid, _ = batch.sen_encoded
         #print(torch.cuda.memory_summary(device="cuda", abbreviated=True))
 
         """to meet the input form of nll loss"""
-        emoid = emoid.squeeze(1)
-        loss = self.hparams.compute_cost(predictions, emoid)
+        senid = senid.squeeze(1)
+        loss = self.hparams.compute_cost(predictions, senid)
         if stage != sb.Stage.TRAIN:
             #self.error_metrics.append(batch.id, predictions, emoid)
 
             predictions_list = np.argmax(predictions.cpu(), axis=1).tolist()
-            labels_list = emoid.cpu().tolist()
+            labels_list = senid.cpu().tolist()
             self.error_metrics.append(batch.id, predictions_list, labels_list)
-
-            if stage == sb.Stage.TEST:
-                predicted_class = predictions.argmax(dim=-1)
-                for i, id in enumerate(batch.id):
-                    log_post = predictions[i].detach().cpu().numpy()
-                    log_post_dict = {cls: float(log_post[j]) for j, cls in enumerate(self.class_names)}
-                    predicted_label = self.class_names[predicted_class[i].item()]
-
-                    if not hasattr(self, "prediction_log"):
-                        self.prediction_log = {}
-
-                    self.prediction_log[id] = {
-                        "log_posteriors": log_post_dict,
-                        "log_posteriors_array": log_post.tolist(),
-                        "predicted_class": predicted_label,
-                    }
 
         return loss
 
@@ -96,8 +68,6 @@ class EmoIdBrain(sb.Brain):
         self.loss_metric = sb.utils.metric_stats.MetricStats(
             metric=sb.nnet.losses.nll_loss
         )
-
-        self.class_names = load_label_encoder("label_encoder.txt")
 
         # Set up evaluation-only statistics trackers
         if stage != sb.Stage.TRAIN:
@@ -168,26 +138,6 @@ class EmoIdBrain(sb.Brain):
                 test_stats=stats,
             )
 
-            summary = self.error_metrics.summarize()
-            self.class_names = load_label_encoder("label_encoder.txt")
-
-            # if "confusion_matrix" in summary:
-            #     conf_mat = np.array(summary["confusion_matrix"])
-            #     plt.figure(figsize=(10, 8))
-            #     sns.heatmap(conf_mat, annot=True, fmt="d", cmap="Blues", xticklabels=self.class_names, yticklabels=self.class_names)
-            #     plt.xlabel("Predicted label")
-            #     plt.ylabel("True label")
-            #     plt.title("Confusion Matrix")
-            #     plt.tight_layout()
-            #     plt.savefig(hparams["output_folder"] + "/confusion_matrix.png")
-            #     plt.close()
-            #     print("Confusion matrix saved as '" + hparams['output_folder'] + "/confusion_matrix.png'")
-
-            if hasattr(self, "prediction_log"):
-                with open(hparams["output_folder"] + "/prediction_outputs.json", "w") as f:
-                    json.dump(self.prediction_log, f, indent=4)
-                print("Prediction log saved to 'prediction_outputs.json'")
-
     def init_optimizers(self):
         "Initializes the wav2vec2 optimizer and model optimizer"
         self.wav2vec2_optimizer = self.hparams.wav2vec2_opt_class(
@@ -240,12 +190,12 @@ def dataio_prep(hparams):
     label_encoder = sb.dataio.encoder.CategoricalEncoder()
 
     # Define label pipeline:
-    @sb.utils.data_pipeline.takes("emotion")
-    @sb.utils.data_pipeline.provides("emo", "emo_encoded")
-    def label_pipeline(emo):
-        yield emo
-        emo_encoded = label_encoder.encode_label_torch(emo)
-        yield emo_encoded
+    @sb.utils.data_pipeline.takes("sentiment")
+    @sb.utils.data_pipeline.provides("sen", "sen_encoded")
+    def label_pipeline(sen):
+        yield sen
+        sen_encoded = label_encoder.encode_label_torch(sen)
+        yield sen_encoded
 
     # Define datasets. We also connect the dataset with the data processing
     # functions defined above.
@@ -260,7 +210,7 @@ def dataio_prep(hparams):
             json_path=data_info[dataset],
             replacements={"data_root": hparams["data_folder"]},
             dynamic_items=[audio_pipeline, label_pipeline],
-            output_keys=["id", "sig", "emo_encoded"],
+            output_keys=["id", "sig", "sen_encoded"],
         )
     # Load or compute the label encoder (with multi-GPU DDP support)
     # Please, take a look into the lab_enc_file to see the label to index
@@ -270,7 +220,7 @@ def dataio_prep(hparams):
     label_encoder.load_or_create(
         path=lab_enc_file,
         from_didatasets=[datasets["train"]],
-        output_key="emo",
+        output_key="sen",
     )
 
     return datasets
@@ -313,11 +263,21 @@ if __name__ == "__main__":
         checkpointer=hparams["checkpointer"],
     )
 
+    # The `fit()` method iterates the training loop, calling the methods
+    # necessary to update the parameters of the model. Since all objects
+    # with changing state are managed by the Checkpointer, training can be
+    # stopped at any point, and will be resumed on next call.
+    emo_id_brain.fit(
+        epoch_counter=emo_id_brain.hparams.epoch_counter,
+        train_set=datasets["train"],
+        valid_set=datasets["valid"],
+        train_loader_kwargs=hparams["dataloader_options"],
+        valid_loader_kwargs=hparams["dataloader_options"],
+    )
 
     # Load the best checkpoint for evaluation
     test_stats = emo_id_brain.evaluate(
         test_set=datasets["test"],
         min_key="error_rate",
-        #max_key="macro_f1",
         test_loader_kwargs=hparams["dataloader_options"],
     )

@@ -2031,3 +2031,179 @@ WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.1
 2025-04-23 22:37:48,415 - matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='/usr/share/fonts/opentype/urw-base35/C059-BdIta.otf', name='C059', style='italic', variant='normal', weight=700, stretch='normal', size='scalable')) = 11.335
 2025-04-23 22:37:48,415 - matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='/usr/share/fonts/opentype/malayalam/Gayathri-Thin.otf', name='Gayathri', style='normal', variant='normal', weight=100, stretch='normal', size='scalable')) = 10.335
 2025-04-23 22:37:48,415 - matplotlib.font_manager - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans ('/home/zsombor/.local/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000.
+2025-04-29 21:00:32,141 - speechbrain.utils.quirks - INFO - Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_cudnn_benchmarking, disable_jit_profiling]
+2025-04-29 21:00:32,141 - speechbrain.utils.quirks - INFO - Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2025-04-29 21:00:32,141 - speechbrain.core - INFO - Beginning experiment!
+2025-04-29 21:00:32,141 - speechbrain.core - INFO - Experiment folder: results/9999
+2025-04-29 21:00:32,270 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/discussions?p=0 HTTP/1.1" 200 7239
+2025-04-29 21:00:32,427 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/wav2vec2-base/commits/refs%2Fpr%2F11 HTTP/1.1" 200 6725
+2025-04-29 21:00:32,565 - speechbrain.utils.superpowers - DEBUG - amdsmi @ file:///opt/rocm-6.3.2/share/amd_smi
+apturl==0.5.2
+argcomplete==1.8.1
+audioread==3.0.1
+bcrypt==3.2.0
+black==24.3.0
+blinker==1.4
+Brlapi==0.8.3
+certifi==2025.1.31
+cffi==1.17.1
+cfgv==3.4.0
+chardet==4.0.0
+charset-normalizer==3.4.1
+click==8.1.7
+colorama==0.4.4
+command-not-found==0.3
+contourpy==1.3.2
+cryptography==3.4.8
+cupshelpers==1.0
+cycler==0.12.1
+dbus-python==1.2.18
+decorator==5.2.1
+defer==1.0.6
+distlib==0.3.9
+distro==1.7.0
+distro-info==1.1+ubuntu0.2
+docstring_parser_fork==0.0.12
+duplicity==0.8.21
+exceptiongroup==1.2.2
+fasteners==0.14.1
+filelock==3.18.0
+flake8==7.0.0
+fonttools==4.57.0
+fsspec==2025.3.0
+future==0.18.2
+httplib2==0.20.2
+huggingface-hub==0.29.2
+HyperPyYAML==1.2.2
+identify==2.6.9
+idna==3.10
+importlib-metadata==4.6.4
+iniconfig==2.0.0
+isort==5.13.2
+jeepney==0.7.1
+Jinja2==3.1.4
+joblib==1.4.2
+keyring==23.5.0
+kiwisolver==1.4.8
+language-selector==0.1
+launchpadlib==1.10.16
+lazr.restfulclient==0.14.4
+lazr.uri==1.0.6
+lazy_loader==0.4
+librosa==0.10.2.post1
+llvmlite==0.44.0
+lockfile==0.12.2
+louis==3.20.0
+macaroonbakery==1.3.1
+Mako==1.1.3
+MarkupSafe==3.0.2
+matplotlib==3.10.1
+mccabe==0.7.0
+monotonic==1.6
+more-itertools==8.10.0
+mpmath==1.3.0
+msgpack==1.1.0
+mypy-extensions==1.0.0
+netifaces==0.11.0
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.0
+numpy==2.2.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-cupti-cu12==12.4.127
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cufft-cu12==11.2.1.3
+nvidia-curand-cu12==10.3.5.147
+nvidia-cusparselt-cu12==0.6.2
+nvidia-nccl-cu12==2.21.5
+nvidia-nvjitlink-cu12==12.4.127
+nvidia-nvtx-cu12==12.4.127
+oauthlib==3.2.0
+olefile==0.46
+packaging==24.2
+pandas==2.2.3
+paramiko==2.9.3
+pathspec==0.12.1
+pexpect==4.8.0
+Pillow==9.0.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pooch==1.8.2
+pre_commit==4.1.0
+protobuf==3.12.4
+ptyprocess==0.7.0
+pycairo==1.20.1
+pycodestyle==2.11.0
+pycparser==2.22
+pycups==2.0.1
+pydoclint==0.4.1
+pyflakes==3.2.0
+PyGObject==3.42.1
+pygtrie==2.5.0
+PyJWT==2.3.0
+pymacaroons==0.13.0
+PyNaCl==1.5.0
+pyparsing==2.4.7
+pyRFC3339==1.1
+pytest==7.4.0
+python-apt==2.4.0+ubuntu4
+python-dateutil==2.9.0.post0
+python-debian==0.1.43+ubuntu1.1
+pytorch-triton-rocm==3.2.0
+pytz==2022.1
+pyxdg==0.27
+PyYAML==6.0.2
+regex==2024.11.6
+reportlab==3.6.8
+requests==2.25.1
+ruamel.yaml==0.18.10
+ruamel.yaml.clib==0.2.12
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+seaborn==0.13.2
+SecretStorage==3.3.1
+sentencepiece==0.2.0
+six==1.16.0
+soundfile==0.13.1
+soxr==0.5.0.post1
+speechbrain==1.0.2
+sympy==1.13.1
+systemd-python==234
+threadpoolctl==3.5.0
+tokenizers==0.21.0
+tomli==2.2.1
+torch==2.6.0+rocm6.2.4
+torchaudio==2.6.0+rocm6.2.4
+torchvision==0.21.0+rocm6.2.4
+tqdm==4.67.1
+transformers==4.49.0
+triton==3.2.0
+typing_extensions==4.13.0
+tzdata==2025.1
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+ufw==0.36.1
+unattended-upgrades==0.1
+urllib3==2.3.0
+usb-creator==0.3.7
+virtualenv==20.29.3
+wadllib==1.3.6
+xdg==5
+xkit==0.0.0
+yamllint==1.35.1
+zipp==1.0.0
+
+WARNING: Ignoring invalid distribution -cipy (/home/zsombor/.local/lib/python3.10/site-packages)
+
+2025-04-29 21:00:32,565 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F11/model.safetensors.index.json HTTP/1.1" 404 0
+2025-04-29 21:00:32,566 - speechbrain.utils.superpowers - DEBUG - 19d1b38
+
+
+2025-04-29 21:00:32,568 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint save hook for save
+2025-04-29 21:00:32,568 - speechbrain.utils.checkpoints - DEBUG - Registered checkpoint load hook for load_if_possible
+2025-04-29 21:00:32,598 - speechbrain.dataio.encoder - DEBUG - Would load categorical encoding from label_encoder.txt, but file doesn't exist yet.
+2025-04-29 21:00:32,618 - speechbrain.dataio.encoder - INFO - Load called, but CategoricalEncoder is not empty. Loaded data will overwrite everything. This is normal if there is e.g. an unk label defined at init.
+2025-04-29 21:00:32,618 - speechbrain.dataio.encoder - DEBUG - Loaded categorical encoding from label_encoder.txt
+2025-04-29 21:00:32,700 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /facebook/wav2vec2-base/resolve/refs%2Fpr%2F11/model.safetensors HTTP/1.1" 302 0
