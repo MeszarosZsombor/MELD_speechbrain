@@ -137,7 +137,7 @@ def label_predictions(train_json, predictions_json, output_json):
 
     print(f"Done! Output: {output_json}")
 
-label_predictions("jsons/ds_test.json", "results/567422/ds_prediction_outputs.json", "results/567422/ds_sentiment_pred.json")
+label_predictions("jsons/ds_test.json", "results/567422/prediction_outputs.json", "results/567422/ds_sentiment_pred.json")
 
 def downsample_neu_to_second_largest(count_json, wav_json, output_json):
     with open(count_json, "r", encoding="utf-8") as f:
