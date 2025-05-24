@@ -16,12 +16,11 @@ def time_to_seconds(time_str):
     return round(total_seconds, 3)
 
 def get_wav_length(wav_path):
-    """Kiolvassa a WAV fájl hosszát másodpercekben."""
     with wave.open(wav_path, "r") as wf:
-        frames = wf.getnframes()  # Összes minta
-        rate = wf.getframerate()  # Mintavételezési gyakoriság
-        duration = frames / float(rate)  # Másodpercekben
-        return round(duration, 3)  # Három tizedesjegyre kerekítve
+        frames = wf.getnframes()  
+        rate = wf.getframerate()  
+        duration = frames / float(rate)  
+        return round(duration, 3)  
 
 def convert(wav_dir, csv_file, output_json):
 
